@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  mysql:
+    image: jdeathe/centos-ssh-mysql:2.3.2
+    container_name: mysql
+    volumes:
+      - ./my.cnf:/etc/my.cnf
+    environment:
+      MYSQL_ROOT_PASSWORD: 'password'
