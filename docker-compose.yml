@@ -1,8 +1,9 @@
 version: '3.3'
 services:
-  mysql:
-    image: bitnami/mysql:5.7-debian-9
-    container_name: mysql
+  mysql_recover:
+    build: .
+    image: mysql_recover
+    container_name: mysql_recover
     volumes:
       - ./recover.sh:/recover.sh
     environment:
